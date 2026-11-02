@@ -1,0 +1,13 @@
+title: Talos
+description: Sim-to-real transfer of tactile-aware robotic grasping. UCSB ECE 189A capstone.
+baseurl: "/Capstone_Website"
+url: "https://alexander-reyes9.github.io"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - milestone1.tex
+  - logo3.png
+  - piper_block_diagram.pdf
+  - vendor

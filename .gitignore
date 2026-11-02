@@ -1,0 +1,10 @@
+_site/
+.jekyll-cache/
+.sass-cache/
+vendor/
+Gemfile.lock
+
+# Source material for the milestone report
+milestone1.tex
+logo3.png
+piper_block_diagram.pdf

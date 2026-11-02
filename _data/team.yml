@@ -1,0 +1,19 @@
+- name: Jeremi
+  role: Policy Optimization
+  description: Researches policy training methods and architectures, then trains and evaluates policies in simulation, including reward design and observation and action spaces.
+
+- name: Colin
+  role: System Identification
+  description: Designs experiments to estimate the arm's physical parameters, analyzes the real robot data, and uses computer vision to estimate object states.
+
+- name: Mayand
+  role: Simulation Environment
+  description: Extends the MuJoCo environment with objects, tasks, reward functions, domain randomization, and simulated cameras and tactile sensors.
+
+- name: Alex
+  role: PiPER Arm and Control Interface
+  description: Builds the physical robot setup and safety harness, and develops the ROS2 and CAN control interface for policy deployment, trajectory replay, and data logging.
+
+- name: Jay
+  role: Analysis and Validation
+  description: Compares simulated and real trajectories to find discrepancies and failure modes, and leads documentation and statistical analysis.

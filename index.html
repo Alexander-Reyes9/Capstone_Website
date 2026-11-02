@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <img class="logo" src="{{ '/assets/img/logo.png' | relative_url }}" alt="Talos logo: a robot gripper reaching toward a human hand">
+  <h1>TALOS</h1>
+  <p class="tagline">Training tactile-aware robotic grasping in simulation and transferring it to a real robot arm.</p>
+  <p class="meta">University of California, Santa Barbara &middot; ECE 189A Capstone</p>
+</section>
+
+<section id="about" class="section">
+  <h2>About the project</h2>
+  <p class="lead">Talos aims to train a tactile-aware grasping policy in simulation, deploy it on a physical robot with minimal performance degradation, and demonstrate that simulation evaluation matches real-world evaluation.</p>
+  <p>Training robot policies directly on hardware is slow, expensive, and risky. We are building a framework that trains and evaluates grasping policies for an AgileX PiPER robot arm in the MuJoCo physics simulator, using imitation learning and reinforcement learning with vision and tactile sensing.</p>
+  <p>A central focus is <strong>system identification</strong>: measuring the arm's dynamics, controller, and sensors so the simulation behaves like the real robot. Policies trained in simulation will run on the physical arm, and we will compare their performance in both settings to show that simulation can reliably predict real-world results.</p>
+
+  <h3>Goals</h3>
+  <ul>
+    <li>Autonomously pick up small objects (up to 70&nbsp;mm wide and 1.5&nbsp;kg) and move them anywhere in the workspace.</li>
+    <li>Use computer vision to find objects, without hard-coded positions.</li>
+    <li>Reach a high success rate on the real robot, such as 98% over repeated trials.</li>
+    <li>Provide a laptop dashboard for live monitoring, manual control, STOP and RESET.</li>
+    <li>Run an automated validation suite that compares simulated and real performance.</li>
+  </ul>
+</section>
+
+<section id="architecture" class="section">
+  <h2>Block diagram</h2>
+  <p>The system has two halves. On the left, the MuJoCo simulation where policies are trained and system identification experiments are designed. On the right, the physical PiPER arm with its cameras, motor sensors, tactile sensors, safety validation, and logging. Data logged from the real robot feeds back into the simulation as identified parameters.</p>
+  <figure>
+    <a href="{{ '/assets/img/block-diagram.pdf' | relative_url }}">
+      <img src="{{ '/assets/img/block-diagram.png' | relative_url }}" alt="Talos system block diagram: MuJoCo simulation on the left, physical PiPER arm on the right">
+    </a>
+    <figcaption>Simulation and physical robot subsystems, interfaces, logging, and system identification. Click for the full-resolution PDF.</figcaption>
+  </figure>
+</section>
+
+<section id="team" class="section">
+  <h2>Team</h2>
+  <div class="team">
+    {% for member in site.data.team %}
+    <article class="member">
+      <h3>{{ member.name }}</h3>
+      <p class="role">{{ member.role }}</p>
+      <p>{{ member.description }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
